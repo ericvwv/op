@@ -169,7 +169,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.AA_TOKEN }}
         file: ${{ env.FILEPATH }}
         tag: openwrt_${{ env.DEVICE_NAME }}_${{ env.FILE_DATE }}
         overwrite: true
